@@ -1,0 +1,21 @@
+<div class="min-h-screen flex flex-col">
+  <header class="bg-sky-300">
+    <div class="container mx-auto px-4">
+      <a routerLink="/" class="text-4xl md:text-6xl font-black text-center py-8">
+        WATER FOR EVERYONE
+      </a>
+    </div>
+  </header>
+  <nav class="bg-gray-200 border-b">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <a *ngFor="let link of links" [routerLink]="link.href" class="px-4 py-3 text-lg font-bold text-black hover:text-blue-900 transition-colors hover:bg-gray-100">
+          {{ link.label }}
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-1">
+    <ng-content></ng-content>
+  </main>
+</div>

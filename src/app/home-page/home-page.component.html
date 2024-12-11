@@ -1,0 +1,22 @@
+<!-- home-page.component.html -->
+<app-layout>
+  <div class="container mx-auto px-4 py-12">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-lg text-black mb-8">
+        Access to potable water remains a challenge for many people in underdeveloped cities worldwide.
+        Women are often the most affected, as they are typically responsible for providing nourishment and caring for
+        their families—a task that heavily relies on access to clean drinking water. To address this pressing issue, we
+        present a platform that offers a simple and efficient solution, aiming to tackle this problem and promote a better
+        quality of life for all.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div *ngFor="let image of images" class="space-y-2">
+          <div class="aspect-[4/3] relative overflow-hidden rounded-lg">
+            <img [src]="image.src" [alt]="image.alt" class="object-cover w-full h-full"/>
+          </div>
+          <p class="text-center text-black">{{ image.caption }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-layout>
